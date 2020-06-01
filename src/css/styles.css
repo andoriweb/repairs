@@ -39,9 +39,80 @@ section {
   margin: 0 auto;
 }
 
+.button {
+  background-color: #ffd200;
+  padding: 20px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ffdb33;
+}
+
+/** <header class="header"> **/
+.header {
+  padding: 20px 0;
+}
+
+.header__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-contacts__block {
+  text-align: right;
+  margin-right: 30px;
+}
+
+.header-contacts__address {
+  font-size: 13px;
+  color: #797979;
+  margin-bottom: 10px;
+}
+
+.header-contacts__phone {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+}
+
+.header__btn {
+  font-size: 13px;
+  font-weight: 700;
+}
+
 /** Media **/
 @media (max-width: 992px) {
   section {
     padding: 10% 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .header-contacts__block {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-logo {
+    width: 40%;
   }
 }
