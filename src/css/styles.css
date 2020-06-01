@@ -98,16 +98,130 @@ section {
   font-weight: 700;
 }
 
+/** <main class="main"> **/
+.main {
+  background-color: #f5f5f5;
+  padding: 50px 0;
+}
+
+.main__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-content {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.main__title {
+  font-size: 41px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.main__subtitle {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 50px;
+}
+
+.main-descr {
+  margin-top: 70px;
+  display: inline-block;
+}
+
+.main-descr__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.main-descr__item:last-child {
+  margin-bottom: 0;
+}
+
+.main-descr__img {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #ffd200;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+
+.main-descr__text {
+  font-size: 14px;
+  max-width: 240px;
+  line-height: 1.5;
+}
+
+.main-img {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  text-align: right;
+  padding-left: 15px;
+}
+
 /** Media **/
 @media (max-width: 992px) {
   section {
     padding: 10% 0;
+  }
+  .main__title {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 910px) {
+  .main__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-content {
+    text-align: center;
+  }
+  .main-descr {
+    text-align: left;
+  }
+  .main-img {
+    margin-top: 40px;
+    padding: 0;
+    text-align: center;
   }
 }
 
 @media (max-width: 575px) {
   .header-contacts__block {
     display: none;
+  }
+}
+
+@media (max-width: 395px) {
+  .main__title {
+    font-size: 32px;
   }
 }
 

@@ -3,11 +3,34 @@
   section
     padding: 10% 0
 
+  .main
+    &__title
+      font-size: 38px
+
+@media( max-width: 910px )
+  .main
+    &__wrap
+      flex-direction: column
+      align-items: center
+    &-content
+      text-align: center
+    &-descr
+      text-align: left
+    &-img
+      margin-top: 40px
+      padding: 0
+      text-align: center
+
 @media( max-width: 575px )
   .header
     &-contacts
       &__block
         display: none
+
+@media( max-width: 395px )
+  .main
+    &__title
+      font-size: 32px
 
 @media( max-width: 360px )
   .header-logo
