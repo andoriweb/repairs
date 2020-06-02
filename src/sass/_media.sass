@@ -27,6 +27,11 @@
     &-form
       width: 100%
 
+  .price
+    &__block
+      flex-basis: 48%
+
+
 @media( max-width: 910px )
   .main
     &__wrap
@@ -48,12 +53,15 @@
     &__wrap
       width: 100%
 
-
 @media( max-width: 575px )
   .header
     &-contacts
       &__block
         display: none
+
+  .price
+    &__block
+      flex-basis: 100%
 
 @media( max-width: 485px )
   .design
