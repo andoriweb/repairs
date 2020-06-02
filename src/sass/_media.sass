@@ -47,6 +47,20 @@
       font-size: 28px
       line-height: 1.3
 
+  .request
+    background: url(../img/request/request-bg-1.jpg), url(../img/request/request-bg-2.jpg)
+    background-position: top center, center bottom
+    background-size:  100% 50%, cover
+    background-repeat: repeat-x, no-repeat
+    &__wrap
+      flex-direction: column
+    &-interview
+      max-width: 500px
+      padding: 0
+      margin: auto
+    &-form
+      padding-top: 20%
+
 @media( max-width: 910px )
   .main
     &__wrap
@@ -109,6 +123,13 @@
       &__block
         width: 100%
         margin-top: 18px
+
+  .request
+    &-interview
+      &__list
+        margin-top: 50px
+      &__text
+        flex-basis: 80%
 
 @media( max-width: 395px )
   .main
