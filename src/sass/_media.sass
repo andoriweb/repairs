@@ -46,6 +46,12 @@
       padding: 0
       text-align: center
 
+  .steps
+    &__block
+      flex-basis: 33%
+      &::before
+        display: none
+
 @media( max-width: 810px )
   .design
     &__title
@@ -60,6 +66,10 @@
         display: none
 
   .price
+    &__block
+      flex-basis: 100%
+
+  .steps
     &__block
       flex-basis: 100%
 
