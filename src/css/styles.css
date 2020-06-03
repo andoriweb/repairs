@@ -654,6 +654,82 @@ strong {
   font-size: 15px;
 }
 
+/** <section class="contact"> **/
+.contact {
+  position: relative;
+  padding: 0;
+}
+
+.contact__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.contact-map {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.contact-map img {
+  height: 100%;
+  width: 100%;
+}
+
+.contact-connection {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7% 0;
+}
+
+.connection__title {
+  font-size: 22px;
+  font-weight: 700;
+  max-width: 300px;
+  line-height: 1.5;
+}
+
+.connection__list {
+  margin-top: 70px;
+}
+
+.connection__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  line-height: 1.3;
+  margin-bottom: 40px;
+}
+
+.connection__item:last-child {
+  margin-bottom: 0;
+}
+
+.connection__item a {
+  color: #000;
+}
+
+.connection__img {
+  margin-right: 25px;
+}
+
 /** Media **/
 @media (max-width: 1100px) {
   .design-form {
@@ -775,9 +851,35 @@ strong {
   .design__wrap {
     width: 100%;
   }
+  .contact {
+    position: static;
+  }
+  .contact__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-map {
+    position: static;
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .contact-connection {
+    margin: auto;
+    width: 100%;
+  }
+  .connection__list {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 575px) {
+  section {
+    padding: 15% 0;
+  }
   .header-contacts__block {
     display: none;
   }

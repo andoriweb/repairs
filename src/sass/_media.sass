@@ -88,7 +88,25 @@
     &__wrap
       width: 100%
 
+  .contact
+    position: static
+    &__wrap
+      flex-direction: column
+    &-map
+      position: static
+      width: 100%
+      order: 1
+    &-connection
+      margin: auto
+      width: 100%
+  .connection
+    &__list
+      margin-top: 50px
+
 @media( max-width: 575px )
+  section
+    padding: 15% 0
+
   .header
     &-contacts
       &__block
