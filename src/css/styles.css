@@ -680,11 +680,6 @@ strong, b {
   left: 0;
 }
 
-.contact-map img {
-  height: 100%;
-  width: 100%;
-}
-
 .contact-connection {
   width: 50%;
   display: -webkit-box;
@@ -730,6 +725,11 @@ strong, b {
 
 .connection__img {
   margin-right: 25px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
 }
 
 /** Modal **/
@@ -1080,6 +1080,7 @@ strong, b {
   .contact-map {
     position: static;
     width: 100%;
+    height: 500px;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
