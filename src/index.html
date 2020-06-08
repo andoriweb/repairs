@@ -6,6 +6,7 @@
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/slick.css">
+	<!-- <link rel="stylesheet" href="css/slick-theme.css"> -->
 	<link rel="stylesheet" href="css/styles.css">
 	<title>Repairs</title>
 </head>
@@ -150,7 +151,7 @@
 						<img src="img/price/price-1.jpg" alt="Фото ремонта-1">
 					</div>
 					<div class="price__title">Ремонт ванных комнат и с/у</div>
-					<button class="price__btn">Узнать цены</button>
+					<button class="price__btn" id="openBathroom">Узнать цены</button>
 				</div>
 				<!-- /.price__block -->
 				<div class="price__block">
@@ -158,7 +159,7 @@
 						<img src="img/price/price-2.jpg" alt="Фото ремонта-2">
 					</div>
 					<div class="price__title">Ремонт комнат и квартир</div>
-					<button class="price__btn">Узнать цены</button>
+					<button class="price__btn" id="openFlat">Узнать цены</button>
 				</div>
 				<!-- /.price__block -->
 				<div class="price__block">
@@ -166,7 +167,7 @@
 						<img src="img/price/price-3.jpg" alt="Фото ремонта-3">
 					</div>
 					<div class="price__title">Отделка офисных помещений</div>
-					<button class="price__btn">Узнать цены</button>
+					<button class="price__btn" id="openOffices">Узнать цены</button>
 				</div>
 				<!-- /.price__block -->
 				<div class="price__block">
@@ -174,7 +175,7 @@
 						<img src="img/price/price-4.jpg" alt="Фото ремонта-4">
 					</div>
 					<div class="price__title">Ремонт в новостройках</div>
-					<button class="price__btn">Узнать цены</button>
+					<button class="price__btn" id="openBuilding">Узнать цены</button>
 				</div>
 				<!-- /.price__block -->
 				<div class="price__block">
@@ -182,7 +183,7 @@
 						<img src="img/price/price-5.jpg" alt="Фото ремонта-5">
 					</div>
 					<div class="price__title">Ремонт кухонь</div>
-					<button class="price__btn">Узнать цены</button>
+					<button class="price__btn" id="openKitchen">Узнать цены</button>
 				</div>
 				<!-- /.price__block -->
 				<div class="price__block">
@@ -190,7 +191,7 @@
 						<img src="img/price/price-6.jpg" alt="Фото ремонта-6">
 					</div>
 					<div class="price__title">Ремонт дач и коттеджей</div>
-					<button class="price__btn">Узнать цены</button>
+					<button class="price__btn" id="openMansion">Узнать цены</button>
 				</div>
 				<!-- /.price__block -->
 			</div>
@@ -424,10 +425,376 @@
 		<!-- /.container -->
 	</section>
 	<!-- /.contact -->
+
+	<!-- Modals -->
+	<div class="modal" id="modal-bathroom">
+		<div class="popup">
+			<button class="popup__close" id="close-bathroom">&times;</button>
+			<!-- /.popup__close -->
+			<div class="popup-content">
+			<div class="popup__block">
+				<div class="popup__img">
+					<img src="img/modal-bathroom/bathroom.jpg" alt="Ванная комната">
+				</div>
+				<div class="popup__text">
+					<div class="popup__title">Ванная комната</div>
+					<div class="popup__price">135*150 - <b>31 000 руб.</b></div>
+					<div class="popup__price">170*170 - <b>43 000 руб.</b></div>
+				</div>
+			</div>
+			<!-- /.popup__block -->
+			<div class="popup__block">
+				<div class="popup__img">
+					<img src="img/modal-bathroom/tyilet.jpg" alt="Туалет">
+				</div>
+				<div class="popup__text">
+					<div class="popup__title">Туалет</div>
+					<div class="popup__price">135*70 - <b>14 000 руб.</b></div>
+				</div>
+			</div>
+			<!-- /.popup__block -->
+			<div class="popup__block">
+				<div class="popup__img">
+					<img src="img/modal-bathroom/tyilet-modern.jpg" alt="Совмещенный санузел">
+				</div>
+				<div class="popup__text">
+					<div class="popup__title">Совмещенный санузел</div>
+					<div class="popup__price">170*210 - <b>54 000 руб.</b></div>
+				</div>
+			</div>
+			<!-- /.popup__block -->
+			<div class="popup__list">
+				<span class="popup-list__title">
+					В стоимость работ входит
+				</span>
+				<ul>
+					<li class="popup-list__item">
+						Демонтаж старого покрытия стен и пола
+					</li>
+					<li class="popup-list__item">
+						Выравнивание стен гипсовыми составами
+					</li>
+					<li class="popup-list__item">
+						Грунтовка стен и пола антисептиком, бетоноконтактом
+					</li>
+					<li class="popup-list__item">
+						Монтаж кафельной плитки на полу и стенах
+					</li>
+					<li class="popup-list__item">
+						Установка реечного или натяжного потолка, светильников
+					</li>
+					<li class="popup-list__item">
+						Монтаж двери с коробкой
+					</li>
+				</ul>
+			</div>
+			</div>
+			<!-- /.popup-content -->
+			<div class="popup-form">
+				<div class="popup-form__title">
+					Узнайте точную стоимость ремонта по&nbsp;телефону!
+				</div>
+				<span class="popup-form__subtitle">
+					Заполните поля ниже - мы свяжемся с&nbsp;Вами
+				</span>
+				<form action="" class="popup-form__form">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваше имя">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваш телефон">
+					<button class="button popup-form__btn" type="submit">Узнать стоимость</button>
+				</form>
+				<div class="popup-form__peal">
+					Или Вы можете перезвонить нам сами<br>по телефону:
+				</div>
+				<div class="popup-form__tel">+7 (8182) 42-51-31</div>
+			</div>
+			<!-- /.popup-form -->
+		</div>
+		<!-- /.popup -->
+	</div>
+	<!-- /#modal-bathroom -->
+
+	<div class="modal" id="modal-flat">
+		<div class="popup">
+			<button class="popup__close" id="close-flat">&times;</button>
+			<!-- /.popup__close -->
+			<div class="popup-content">
+				<div class="popup__block">
+					<div class="popup__img">
+						<img src="img/modal-flat/flat-1.jpg" alt="Ремонт квартиры">
+					</div>
+					<div class="popup__price">12 м2 - <b>36 000 руб.</b></div>
+				</div>
+				<!-- /.popup__block -->
+				<div class="popup__block">
+					<div class="popup__img">
+						<img src="img/modal-flat/flat-2.jpg" alt="Ремонт квартиры">
+					</div>
+					<div class="popup__price">16 м2 - <b>48 000 руб.</b></div>
+				</div>
+				<!-- /.popup__block -->
+				<div class="popup__block">
+					<div class="popup__img">
+						<img src="img/modal-flat/flat-3.jpg" alt="Ремонт квартиры">
+					</div>
+					<div class="popup__price">20 м2 - <b>60 000 руб</b></div>
+				</div>
+				<!-- /.popup__block -->
+				<div class="popup__list">
+					<span class="popup-list__title">
+						В стоимость работ входит
+					</span>
+					<ul class="popup-list">
+						<li class="popup-list__item">
+							Снятие верхнего слоя покрытия с потолка, стен и пола
+						</li>
+						<li class="popup-list__item">
+							Подготовка оконного откоса
+						</li>
+						<li class="popup-list__item">
+							Выравнивание стен гипсовым составом
+						</li>
+						<li class="popup-list__item">
+							Виниловое покрытие, шлифовка, грунтовка
+						</li>
+						<li class="popup-list__item">
+							Поклейка обоев и покраска
+						</li>
+						<li class="popup-list__item">
+							Выравнивание потолка гипсовым составом
+						</li>
+						<li class="popup-list__item">
+							Оклейка потолка потолочными обоями или его покраска
+						</li>
+						<li class="popup-list__item">
+							Натяжной, тканевый или парящий потолок
+						</li>
+						<li class="popup-list__item">
+							Протяжка пола, покрытие паркетной доской, ламинатом или линолеумом
+						</li>
+						<li class="popup-list__item">
+							Замена электророзеток
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- /.popup-content -->
+			<div class="popup-form">
+				<div class="popup-form__title">
+					Узнайте точную стоимость ремонта по&nbsp;телефону!
+				</div>
+				<span class="popup-form__subtitle">
+					Заполните поля ниже - мы свяжемся с&nbsp;Вами
+				</span>
+				<form action="" class="popup-form__form">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваше имя">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваш телефон">
+					<button class="button popup-form__btn" type="submit">Узнать стоимость</button>
+				</form>
+				<div class="popup-form__peal">
+					Или Вы можете перезвонить нам сами<br>по телефону:
+				</div>
+				<div class="popup-form__tel">+7 (8182) 42-51-31</div>
+			</div>
+			<!-- /.popup-form -->
+		</div>
+		<!-- /.popup -->
+	</div>
+	<!-- /#modal-flat -->
+
+	<div class="modal" id="modal-offices">
+		<div class="popup">
+			<button class="popup__close" id="close-offices">&times;</button>
+			<!-- /.popup__close -->
+			<div class="popup-content popup-content__slider">
+				<div class="offices-slider">
+					<div>
+						<img src="img/modal-offices/offices-1.jpg" alt="Ремонт в ровостройке">
+					</div>
+					<div>
+						<img src="img/modal-offices/offices-2.jpg" alt="Ремонт в ровостройке">
+					</div>
+				</div>
+				<!-- /.offices-slider -->
+				<button class="slider__btn slider__btn_prev offices-prev"></button>
+				<button class="slider__btn slider__btn_next offices-next"></button>
+				<p class="modal__description">
+					Цена отделки офисного помещения зависит от площади, использованных материалов и видов проделанных работ.
+				</p>
+			</div>
+			<!-- /.popup-content -->
+			<div class="popup-form">
+				<div class="popup-form__title">
+					Узнайте точную стоимость ремонта по&nbsp;телефону!
+				</div>
+				<span class="popup-form__subtitle">
+					Заполните поля ниже - мы свяжемся с&nbsp;Вами
+				</span>
+				<form action="" class="popup-form__form">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваше имя">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваш телефон">
+					<button class="button popup-form__btn" type="submit">Узнать стоимость</button>
+				</form>
+				<div class="popup-form__peal">
+					Или Вы можете перезвонить нам сами<br>по телефону:
+				</div>
+				<div class="popup-form__tel">+7 (8182) 42-51-31</div>
+			</div>
+			<!-- /.popup-form -->
+		</div>
+		<!-- /.popup -->
+	</div>
+	<!-- /#modal-offices -->
+
+	<div class="modal" id="modal-building">
+		<div class="popup">
+			<button class="popup__close" id="close-building">&times;</button>
+			<!-- /.popup__close -->
+			<div class="popup-content popup-content__slider">
+				<div class="building-slider">
+					<div>
+						<img src="img/modal-building/building-1.jpg" alt="Ремонт в ровостройке">
+					</div>
+					<div>
+						<img src="img/modal-building/building-2.jpg" alt="Ремонт в ровостройке">
+					</div>
+				</div>
+				<!-- /.building-slider -->
+				<button class="slider__btn slider__btn_prev building-prev"></button>
+				<button class="slider__btn slider__btn_next building-next"></button>
+				<p class="modal__description">
+					Цена ремонта в новостройке будет зависеть от площади, использованных материалов и видов проделанных работ.
+				</p>
+			</div>
+			<!-- /.popup-content -->
+			<div class="popup-form">
+				<div class="popup-form__title">
+					Узнайте точную стоимость ремонта по&nbsp;телефону!
+				</div>
+				<span class="popup-form__subtitle">
+					Заполните поля ниже - мы свяжемся с&nbsp;Вами
+				</span>
+				<form action="" class="popup-form__form">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваше имя">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваш телефон">
+					<button class="button popup-form__btn" type="submit">Узнать стоимость</button>
+				</form>
+				<div class="popup-form__peal">
+					Или Вы можете перезвонить нам сами<br>по телефону:
+				</div>
+				<div class="popup-form__tel">+7 (8182) 42-51-31</div>
+			</div>
+			<!-- /.popup-form -->
+		</div>
+		<!-- /.popup -->
+	</div>
+	<!-- /#modal-building -->
+
+	<div class="modal" id="modal-kitchen">
+		<div class="popup">
+			<button class="popup__close" id="close-kitchen">&times;</button>
+			<!-- /.popup__close -->
+			<div class="popup-content popup-content__slider">
+				<div class="kitchen-slider">
+					<div>
+						<img src="img/modal-kitchen/kitchen-1.jpg" alt="Ремонт кухни">
+					</div>
+					<div>
+						<img src="img/modal-kitchen/kitchen-2.jpg" alt="Ремонт кухни">
+					</div>
+					<div>
+						<img src="img/modal-kitchen/kitchen-3.jpg" alt="Ремонт кухни">
+					</div>
+				</div>
+				<!-- /.kitchen-slider -->
+				<button class="slider__btn slider__btn_prev kitchen-prev"></button>
+				<button class="slider__btn slider__btn_next kitchen-next"></button>
+				<p class="modal__description">
+					Цена ремонта кухни будет зависеть от площади, использованных материалов и видов проделанных работ.
+				</p>
+			</div>
+			<!-- /.popup-content -->
+			<div class="popup-form">
+				<div class="popup-form__title">
+					Узнайте точную стоимость ремонта по&nbsp;телефону!
+				</div>
+				<span class="popup-form__subtitle">
+					Заполните поля ниже - мы свяжемся с&nbsp;Вами
+				</span>
+				<form action="" class="popup-form__form">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваше имя">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваш телефон">
+					<button class="button popup-form__btn" type="submit">Узнать стоимость</button>
+				</form>
+				<div class="popup-form__peal">
+					Или Вы можете перезвонить нам сами<br>по телефону:
+				</div>
+				<div class="popup-form__tel">+7 (8182) 42-51-31</div>
+			</div>
+			<!-- /.popup-form -->
+		</div>
+		<!-- /.popup -->
+	</div>
+	<!-- /#modal-kitchen -->
+
+	<div class="modal" id="modal-mansion">
+		<div class="popup">
+			<button class="popup__close" id="close-mansion">&times;</button>
+			<!-- /.popup__close -->
+			<div class="popup-content popup-content__slider">
+				<div class="mansion-slider">
+					<div>
+						<img src="img/modal-mansion/mansion-1.jpg" alt="Ремонт коттеджа">
+					</div>
+					<div>
+						<img src="img/modal-mansion/mansion-2.jpg" alt="Ремонт коттеджа">
+					</div>
+					<div>
+						<img src="img/modal-mansion/mansion-3.jpg" alt="Ремонт коттеджа">
+					</div>
+					<div>
+						<img src="img/modal-mansion/mansion-4.jpg" alt="Ремонт коттеджа">
+					</div>
+				</div>
+				<!-- /.mansion-slider -->
+				<button class="slider__btn slider__btn_prev mansion-prev"></button>
+				<button class="slider__btn slider__btn_next mansion-next"></button>
+				<p class="modal__description">
+					Цена ремонта дачного дома или коттеджа будет зависеть от площади, использованных материалов и видов проделанных работ.
+				</p>
+			</div>
+			<!-- /.popup-content -->
+			<div class="popup-form">
+				<div class="popup-form__title">
+					Узнайте точную стоимость ремонта по&nbsp;телефону!
+				</div>
+				<span class="popup-form__subtitle">
+					Заполните поля ниже - мы свяжемся с&nbsp;Вами
+				</span>
+				<form action="" class="popup-form__form">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваше имя">
+					<input type="text" class="form__input popup-form__input" placeholder="Ваш телефон">
+					<button class="button popup-form__btn" type="submit">Узнать стоимость</button>
+				</form>
+				<div class="popup-form__peal">
+					Или Вы можете перезвонить нам сами<br>по телефону:
+				</div>
+				<div class="popup-form__tel">+7 (8182) 42-51-31</div>
+			</div>
+			<!-- /.popup-form -->
+		</div>
+		<!-- /.popup -->
+	</div>
+	<!-- /#modal-mansion -->
+
+
 	
 
 
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<!-- <script
+  src="https://code.jquery.comhttps://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script> -->
 
 	<script src="js/slick.min.js"></script>
 
